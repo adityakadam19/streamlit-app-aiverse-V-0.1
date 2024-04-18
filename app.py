@@ -244,25 +244,23 @@ Approach this interaction with empathy and a genuine interest in learning more a
             st.write("Review Feedback:")
             st.markdown(review_feedback)
 
-# Part to run the Streamlit app
-if _name_ == "__main__":
-    # Define the sidebar
-    pages = {
-        "Home": home,
-        "Code Explainer": code_explainer,
-        "Code Generator": code_generator,
-        "Code Debugger": code_debugger,
-        "Code Documentation": code_documentation,
-        "Code Reviewer": code_reviewer,
-        "AI Interviewer": ai_interview,
-    }
+# Define the pages
+pages = {
+    "Home": home,
+    "Code Explainer": code_explainer,
+    "Code Generator": code_generator,
+    "Code Debugger": code_debugger,
+    "Code Documentation": code_documentation,
+    "Code Reviewer": code_reviewer,
+    "AI Interviewer": ai_interview,
+}
 
-    # Set the default page
-    default_page = "Home"
+# Set the default page
+default_page = "Home"
 
-    # Create the sidebar
-    st.sidebar.title("Navigation")
-    selection = st.sidebar.radio("Go to", list(pages.keys()), index=list(pages.keys()).index(default_page))
+# Create the sidebar
+st.sidebar.title("Navigation")
+selection = st.sidebar.radio("Go to", list(pages.keys()), index=list(pages.keys()).index(default_page))
 
-    # Run the selected page
-    pages[selection]()
+# Run the selected page
+pages[selection]()
